@@ -1,0 +1,156 @@
+
+<label for="slider"></label>
+
+<div class="wrapper">
+	<div class="top-icons">
+		<i class="fas fa-long-arrow-alt-left"></i>
+		<i class="fas fa-ellipsis-v"></i>
+		<i class="far fa-heart"></i>
+	</div>
+	
+	<div class="profile">
+		<img src="IMG_20191105_155805_Bokeh.jpg" class="avatar" style="width: 2 px;border-radius : 50%;height: 2 px"  ,width="210" 
+		height="255">
+		<div class="check"><i class="fas fa-check"></i></div>
+		<h3 class="name">Nabin Kc</h3>
+		<p class="title">.Net Developer</p>
+		<p class="description"></p>
+		<button onclick="launch_toast()">Hire Me</button>
+		
+	</div>
+<div id="toast"><div id="tit"> Hello,</div><div id="desc">This is nabin Kc</div></div>
+	<style>
+		#toast {
+    visibility: hidden;
+    max-width: 50px;
+    height: 50px;
+    /*margin-left: -125px;*/
+    margin: auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+
+    position: fixed;
+    z-index: 1;
+    left: 0;right:0;
+    bottom: 30px;
+    font-size: 17px;
+    white-space: nowrap;
+}
+#toast #tit{
+	width: 60px;
+	height: 50px;
+    
+    float: left;
+    padding-left: 10px;
+	padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+    box-sizing: border-box;
+
+    
+    background-color: #111;
+    color: #fff;
+}
+#toast #desc{
+
+    
+    color: #fff;
+   
+    padding: 16px;
+    
+    overflow: hidden;
+	white-space: nowrap;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes expand {
+    from {min-width: 50px} 
+    to {min-width: 350px}
+}
+
+@keyframes expand {
+    from {min-width: 50px}
+    to {min-width: 350px}
+}
+@-webkit-keyframes stay {
+    from {min-width: 350px} 
+    to {min-width: 350px}
+}
+
+@keyframes stay {
+    from {min-width: 350px}
+    to {min-width: 350px}
+}
+@-webkit-keyframes shrink {
+    from {min-width: 350px;} 
+    to {min-width: 50px;}
+}
+
+@keyframes shrink {
+    from {min-width: 350px;} 
+    to {min-width: 50px;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 60px; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 60px; opacity: 0;}
+}
+	</style>
+	<div class="social-icons">
+		<div class="icon">
+			<a href="/"><i class="fab fa-dribbble"></i></a>
+			<h4>12.8k</h4>
+			<p>Followers</p>
+		</div>
+		
+		<div class="icon">
+			<a href="#"><i class="fab fa-behance"></i></a>
+			<h4>12.8k</h4>
+			<p>Followers</p>
+		</div>
+		
+		<div class="icon">
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<h4>12.8k</h4>
+			<p>Followers</p>
+		</div>
+	</div>
+</div>
+
+<div class="concept">concept by 
+	<a href="https://dribbble.com/shots/4346772-Profile-Card" target="_blank">
+		<i class="fab fa-dribbble"></i> Nabin Kc
+	</a>
+</div>
+
+
+<script>
+function launch_toast() {
+    var x = document.getElementById("toast")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+}
+</script>
